@@ -1,0 +1,26 @@
+server:
+  port: 8092
+
+spring:
+  profiles:
+  - mysql
+  datasource:
+    platform: mysql
+    initialization-mode: always
+    separator: ^;
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/java_code_standard?setUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: logic123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
+
+jwt:
+  secret: 34I/dvToTOPApvquxkvYCwrgKELmN2rW1rYTe6IpKFA=
+  ttl: 5
+  issuer: logictw

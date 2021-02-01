@@ -1,0 +1,28 @@
+server:
+  port: 8092
+
+spring:
+  profiles:
+  - default
+  datasource:
+    platform: sql-server
+    initialization-mode: always
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://sqlserver-tw.c41f5bi5nzeb.ap-northeast-1.rds.amazonaws.com:1433;DatabaseName=sample_server_roy
+    username: root
+    password: Qp8.!FSH
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+  flyway:
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+jwt:
+  secret: 34I/dvToTOPApvquxkvYCwrgKELmN2rW1rYTe6IpKFA=
+  ttl: 5
+  issuer: logictw

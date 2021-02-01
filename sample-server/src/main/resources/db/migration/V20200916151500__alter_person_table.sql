@@ -1,0 +1,1 @@
+alter table PERSON add description nvarchar(64);
