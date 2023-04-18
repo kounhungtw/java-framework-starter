@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://sqlserver-tw.c41f5bi5nzeb.ap-northeast-1.rds.amazonaws.com:1433;DatabaseName=sample_server_roy
     username: root
-    password: Qp8.!FSH
+    password: xxxxxxx
   jpa:
     show-sql: true
     hibernate:
